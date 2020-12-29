@@ -1,24 +1,35 @@
 {
-  "name": "dpt",
-  "version": "1.0.0",
+  "name": "depluxtools",
+  "version": "1.0.3",
   "description": "dpt(Deplux tool)로 여러분의 호스팅을 손쉽게 가꾸어보세요",
   "main": "./dist/App.js",
   "scripts": {
-    "install": "npm i",
-    "build":"tsc",
+    "build": "tsc",
+    "dpt": "tsc && node ./dist/App.js",
+    "dpt:all": "tsc && node ./dist/App.js --init --zip",
+    "dpt:init": "tsc && node ./dist/App.js --init",
+    "dpt:zip": "tsc && node ./dist/App.js --zip",
+    "dpt:help": "tsc && node ./dist/App.js --help",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Deplux/dpt.git"
   },
-  "bin":{
-    "dpt":"./dist/App.js"
+  "bin": {
+    "dpt": "./App"
   },
   "author": "Deplux",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Deplux/dpt/issues"
   },
-  "homepage": "https://github.com/Deplux/dpt#readme"
+  "homepage": "https://github.com/Deplux/dpt#readme",
+  "dependencies": {
+    "@types/fs-extra": "^9.0.6",
+    "@types/node": "^14.14.16",
+    "@types/yargs": "^15.0.12",
+    "fs-extra": "^9.0.1",
+    "yargs": "^16.2.0"
+  }
 }
