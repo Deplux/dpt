@@ -1,0 +1,24 @@
+{
+  "name": "dpt",
+  "version": "1.0.0",
+  "description": "dpt(Deplux tool)로 여러분의 호스팅을 손쉽게 가꾸어보세요",
+  "main": "./dist/App.js",
+  "scripts": {
+    "install": "npm i",
+    "build":"tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Deplux/dpt.git"
+  },
+  "bin":{
+    "dpt":"./dist/App.js"
+  },
+  "author": "Deplux",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Deplux/dpt/issues"
+  },
+  "homepage": "https://github.com/Deplux/dpt#readme"
+}
