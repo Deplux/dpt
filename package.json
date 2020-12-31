@@ -1,6 +1,6 @@
 {
   "name": "depluxtools",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "dpt(Deplux tool)로 여러분의 호스팅을 손쉽게 가꾸어보세요",
   "main": "./dist/App.js",
   "scripts": {
