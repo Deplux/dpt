@@ -26,9 +26,11 @@
   },
   "homepage": "https://github.com/Deplux/dpt#readme",
   "dependencies": {
+    "@types/archiver": "^5.1.0",
     "@types/fs-extra": "^9.0.6",
     "@types/node": "^14.14.16",
     "@types/yargs": "^15.0.12",
+    "archiver": "^5.1.0",
     "fs-extra": "^9.0.1",
     "yargs": "^16.2.0"
   }

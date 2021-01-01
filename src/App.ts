@@ -1,5 +1,6 @@
 import yargs from 'yargs'
 import { Init } from './Command/Init'
+import { Zip } from './Command/Zip'
 
 // 옵션 받기
 export const Args = yargs
@@ -25,6 +26,6 @@ if(Args.init){
 }
 
 if(Args.zip){
-  //console.log("Zipping this project to Deploy at Deplux, Wait a moment..")
-  console.log("This Function doesn't support yet.")
+  console.log("Zipping this project to Deploy at Deplux, Wait a moment..")
+  Zip(CurrentPath)
 }
