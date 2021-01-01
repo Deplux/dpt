@@ -19,13 +19,12 @@ export const Args = yargs
 //현 폴더 구하기
 const CurrentPath = process.cwd()
 
-if(Args.init){
-  console.log("Initializing this project for Deplux, Wait a moment..")
+if (Args.init) {
+  console.log("Initializing this project for Deplux...")
   Init(CurrentPath)
-  console.log("Dockerfile has created")
-}
-
-if(Args.zip){
-  console.log("Zipping this project to Deploy at Deplux, Wait a moment..")
+} else if (Args.zip) {
+  console.log("Zipping this project for Deploying at Deplux, Wait a moment..")
   Zip(CurrentPath)
+} else {
+  console.error(`Error: Cannot determine action. Run 'dpt --help' to show help message.`)
 }
