@@ -3,7 +3,6 @@ package main
 import (
 	"archive/zip"
 	"encoding/json"
-	"fmt"
 	"io"
 	"io/ioutil"
 	"log"
@@ -235,7 +234,7 @@ func addFiles(w *zip.Writer, basePath, baseInZip string) {
 			continue
 		}
 
-		fmt.Println(Green(basePath+file.Name()), " 추가됨")
+		log.Println(Green(basePath+file.Name()), " 추가됨")
 
 		if !file.IsDir() {
 			dat, err := ioutil.ReadFile(basePath + file.Name())
