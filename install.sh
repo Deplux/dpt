@@ -16,7 +16,7 @@ esac
 install_uri="https://raw.github.com/Deplux/dpt/migrate-go/build/${target}"
 install_path="/usr/local/bin/dpt"
 
-curl --progress-bar --output "${install_path}" "${install_uri}"
+curl --fail --location --progress-bar --output "${install_path}" "${install_uri}"
 chmod a+x "${install_path}"
 
 echo "Deplux tools가 성공적으로 설치되었습니다"

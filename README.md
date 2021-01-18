@@ -9,5 +9,5 @@ iwr https://raw.github.com/Deplux/dpt/migrate-go/install.ps1 -useb | iex
 
 맥OS, 리눅스 (터미널에서 입력):
 ```
-curl -L https://raw.github.com/Deplux/dpt/migrate-go/install.sh | sh
+curl -L https://raw.github.com/Deplux/dpt/migrate-go/install.sh | sudo sh
 ```
