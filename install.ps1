@@ -5,7 +5,7 @@ $install_uri = 'https://raw.github.com/Deplux/dpt/migrate-go/build/windows_amd64
 
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
-if (!(Test-Path $BinDir)) {
+if (!(Test-Path $install_path)) {
   New-Item $install_path -ItemType Directory | Out-Null
 }
 
