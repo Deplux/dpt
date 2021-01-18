@@ -229,14 +229,11 @@ func addFiles(w *zip.Writer, basePath, baseInZip string) {
 	}
 
 	for _, file := range files {
-
-		if strings.HasPrefix(file.Name(), "dpt-") && strings.HasSuffix(file.Name(), ".zip") {
-			continue
-		}
-
-		log.Println(Green(basePath+file.Name()), " 추가됨")
-
 		if !file.IsDir() {
+			if strings.HasPrefix(file.Name(), "dpt-") && strings.HasSuffix(file.Name(), ".zip") {
+				continue
+			}
+
 			dat, err := ioutil.ReadFile(basePath + file.Name())
 			if err != nil {
 				log.Print(Red("압축 작업 중 오류가 발생했습니다"), err)
@@ -251,12 +248,23 @@ func addFiles(w *zip.Writer, basePath, baseInZip string) {
 			if err != nil {
 				log.Print(Red("압축 작업 중 오류가 발생했습니다"), err)
 			}
+			log.Println(Green(basePath+file.Name()), " 추가됨")
 		} else if file.IsDir() {
+			if contains([]string{"node_modules", ".git", "dist"}, file.Name()) {
+				continue
+			}
 
-			// Recurse
 			newBase := basePath + file.Name() + "/"
-
 			addFiles(w, newBase, baseInZip+file.Name()+"/")
 		}
 	}
+}
+
+func contains(arr []string, str string) bool {
+	for _, a := range arr {
+		if a == str {
+			return true
+		}
+	}
+	return false
 }
